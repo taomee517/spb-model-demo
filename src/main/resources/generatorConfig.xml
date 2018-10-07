@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE generatorConfiguration
+         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!-- jdbc连接的mysql或者oracle的连接包jar，最好是配置为绝对路径 -->
+	<classPathEntry
+		location="F:/jdbcDriver/mysql-connector-java-5.1.41-bin.jar" />
+	<context id="mybatis" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="false" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 配置数据源信息，多数据源需要配置多份文件，对应需要修改数据源信息，可以使不同主机的数据库，也可以是同一数据库服务器上的不同数据库名 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/db_spb_demo?useSSL=false" userId="root"
+			password="lt030517">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="com.idea.spbmodeldemo.entity.po"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- mapper文件生成路劲和包名 -->
+		<sqlMapGenerator targetPackage="mapper"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- dao层接口文件 -->
+		<javaClientGenerator targetPackage="com.idea.spbmodeldemo.dao"
+			targetProject="src/main/java"
+			type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!-- 数据库里面的表名信息和配置，多张表需要配置多条信息
+		
+ 
+ 		<table tableName="dictionary" domainObjectName="Dictionary"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
+		</table>
+		-->
+		<table tableName="tb_vehicle_brand" domainObjectName="VehicleBrandPO"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
+		</table>
+		<table tableName="tb_vehicle_series" domainObjectName="VehicleSeriesPO"
+			   enableCountByExample="true" enableUpdateByExample="true"
+			   enableDeleteByExample="true" enableSelectByExample="true"
+			   selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
+		</table>
+		<table tableName="tb_vehicle_model" domainObjectName="VehicleModelPO"
+			   enableCountByExample="true" enableUpdateByExample="true"
+			   enableDeleteByExample="true" enableSelectByExample="true"
+			   selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
+		</table>
+	</context>
+</generatorConfiguration>
