@@ -6,7 +6,7 @@
 <generatorConfiguration>
 	<!-- jdbc连接的mysql或者oracle的连接包jar，最好是配置为绝对路径 -->
 	<classPathEntry
-		location="F:/jdbcDriver/mysql-connector-java-5.1.41-bin.jar" />
+		location="E:\Maven_repo\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar" />
 	<context id="mybatis" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<property name="suppressDate" value="false" />
@@ -15,7 +15,7 @@
 		<!-- 配置数据源信息，多数据源需要配置多份文件，对应需要修改数据源信息，可以使不同主机的数据库，也可以是同一数据库服务器上的不同数据库名 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://127.0.0.1:3306/db_spb_demo?useSSL=false" userId="root"
-			password="lt030517">
+			password="123456">
 		</jdbcConnection>
 		<javaModelGenerator targetPackage="com.idea.spbmodeldemo.entity.po"
 			targetProject="src/main/java">
@@ -42,20 +42,20 @@
 			selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
 		</table>
 		-->
-		<table tableName="tb_vehicle_brand" domainObjectName="VehicleBrandPO"
+		<table tableName="tb_vehicle_brand" domainObjectName="VehicleBrandAliasPO"
 			enableCountByExample="true" enableUpdateByExample="true"
 			enableDeleteByExample="true" enableSelectByExample="true"
 			selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
 		</table>
-		<table tableName="tb_vehicle_series" domainObjectName="VehicleSeriesPO"
-			   enableCountByExample="true" enableUpdateByExample="true"
-			   enableDeleteByExample="true" enableSelectByExample="true"
-			   selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
-		</table>
-		<table tableName="tb_vehicle_model" domainObjectName="VehicleModelPO"
-			   enableCountByExample="true" enableUpdateByExample="true"
-			   enableDeleteByExample="true" enableSelectByExample="true"
-			   selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">
-		</table>
+<!--		<table tableName="tb_vehicle_series" domainObjectName="VehicleSeriesPO"-->
+<!--			   enableCountByExample="true" enableUpdateByExample="true"-->
+<!--			   enableDeleteByExample="true" enableSelectByExample="true"-->
+<!--			   selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">-->
+<!--		</table>-->
+<!--		<table tableName="tb_vehicle_model" domainObjectName="VehicleModelPO"-->
+<!--			   enableCountByExample="true" enableUpdateByExample="true"-->
+<!--			   enableDeleteByExample="true" enableSelectByExample="true"-->
+<!--			   selectByExampleQueryId="false" enableInsert="true" enableUpdateByPrimaryKey="true">-->
+<!--		</table>-->
 	</context>
 </generatorConfiguration>

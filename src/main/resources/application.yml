@@ -1,5 +1,5 @@
 spring:
   profiles:
-    active: win7
+    active: dev
 
   

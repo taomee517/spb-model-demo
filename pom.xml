@@ -145,7 +145,7 @@
                     <skipTests>true</skipTests>
                 </configuration>
             </plugin>
-            <!--Mybatis逆向工程插件
+            <!--Mybatis逆向工程插件-->
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -167,7 +167,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 
