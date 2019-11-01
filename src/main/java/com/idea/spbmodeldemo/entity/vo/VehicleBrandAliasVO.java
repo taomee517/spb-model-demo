@@ -46,5 +46,8 @@ public class VehicleBrandAliasVO implements Serializable {
     @ApiModelProperty(value = "车型数量")
     private Integer modelNum;
 
+    @ApiModelProperty(value = "创建人姓名")
+    private String crtUser;
+
 
 }
